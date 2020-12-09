@@ -23,15 +23,14 @@ namespace Grafy4
         static void Main(string[] args)
         {
 
-            
 
             int maxLenght = 0;
 
-            if (args.Count() == 1 && File.Exists(".\\" + args[0]))
-            {
+            
                 //string test = "abcdabcdab";
-                string test = File.ReadAllText(".\\" + args[0]); //Pobierz plik
-                
+                //string test = File.ReadAllText(".\\" + args[0]); //Pobierz plik
+                string test = Console.ReadLine();
+
                 List<char> prefix = new List<char>();
 
                 for (int i = 0; i < test.Length - 1; i++) //miejsce w stringu
@@ -43,7 +42,7 @@ namespace Grafy4
                     //else k = 0;
 
                     //k sprawdza tylko 'p' w tył
-                    int p = 4000;
+                    int p = 3000;
                     if (i > p) k = i - p;
                     else k = 0;
 
@@ -54,8 +53,7 @@ namespace Grafy4
                         if (temp > maxLenght) maxLenght = temp;
                     }
                 }
-            }
-            else Console.WriteLine("Nie ma takiego pliku!");
+            
             
            
             /* if (args.Count() == 1 && File.Exists(".\\" + args[0]))
